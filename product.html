@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BirKen - Ürün Detayı">
+  <title>Ürün Detayı - BirKen</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="product-page">
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Ana içeriğe geç</a>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <strong>500₺</strong> ve üzeri alışverişlerde <strong>ücretsiz kargo!</strong>
+    <a href="category.html">Hemen Alışverişe Başla →</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header-main">
+        <!-- Logo -->
+        <a href="index.html" class="logo" aria-label="BirKen Ana Sayfa">
+          <img src="logo-1909x941.webp" alt="BirKen Logo" width="180" height="89">
+        </a>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <form role="search" aria-label="Ürün ara">
+            <label for="search-input" class="sr-only">Ürün ara</label>
+            <input type="search" id="search-input" name="q" placeholder="Ürün, marka veya kategori ara..." autocomplete="off">
+            <button type="submit" aria-label="Ara">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Header Actions -->
+        <nav class="header-actions" aria-label="Hesap ve sepet">
+          <a href="account.html" class="header-action" aria-label="Hesabım">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>Hesabım</span>
+          </a>
+          <a href="account.html#wishlist" class="header-action" aria-label="Favorilerim">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span>Favoriler</span>
+          </a>
+          <a href="cart.html" class="header-action" aria-label="Sepetim">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span>Sepetim</span>
+            <span class="badge cart-badge" style="display: none;">0</span>
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Menüyü aç" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Navigation -->
+    <nav class="category-nav" aria-label="Kategoriler">
+      <div class="container">
+        <ul class="category-nav-list" role="menubar">
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=cilt-bakimi" class="category-nav-link" role="menuitem">Cilt Bakımı</a>
+          </li>
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=gunes-koruyucular" class="category-nav-link" role="menuitem">Güneş Koruyucular</a>
+          </li>
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=sac-bakimi" class="category-nav-link" role="menuitem">Saç Bakımı</a>
+          </li>
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=anne-bebek" class="category-nav-link" role="menuitem">Anne & Bebek</a>
+          </li>
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=vitamin-takviye" class="category-nav-link" role="menuitem">Vitamin & Takviye</a>
+          </li>
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=agiz-dis" class="category-nav-link" role="menuitem">Ağız & Diş</a>
+          </li>
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=medikal" class="category-nav-link" role="menuitem">Medikal</a>
+          </li>
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=makyaj" class="category-nav-link" role="menuitem">Makyaj</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Gezinti yolu">
+        <a href="index.html">Ana Sayfa</a>
+        <span aria-hidden="true">›</span>
+        <a href="category.html" class="product-category-link">Cilt Bakımı</a>
+        <span aria-hidden="true">›</span>
+        <span class="current product-breadcrumb-title">Vitamin C Aydınlatıcı Serum</span>
+      </nav>
+
+      <!-- Product Detail -->
+      <article class="product-detail">
+        <!-- Product Gallery -->
+        <div class="product-gallery">
+          <div class="product-image-main">
+            <!-- Demo placeholder with SVG -->
+            <svg viewBox="0 0 400 400" aria-hidden="true">
+              <rect width="400" height="400" fill="#f3f4f6"/>
+              <circle cx="200" cy="160" r="80" fill="#e5e7eb"/>
+              <rect x="160" y="240" width="80" height="120" rx="8" fill="#e5e7eb"/>
+              <text x="200" y="380" text-anchor="middle" fill="#9ca3af" font-size="14">Ürün Görseli</text>
+            </svg>
+            <span class="product-badge product-badge-sale">%20 İndirim</span>
+          </div>
+          <div class="product-thumbnails">
+            <button class="product-thumbnail active" aria-label="Görsel 1" aria-pressed="true">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <rect width="100" height="100" fill="#f3f4f6"/>
+                <circle cx="50" cy="40" r="20" fill="#e5e7eb"/>
+                <rect x="40" y="60" width="20" height="30" rx="2" fill="#e5e7eb"/>
+              </svg>
+            </button>
+            <button class="product-thumbnail" aria-label="Görsel 2" aria-pressed="false">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <rect width="100" height="100" fill="#f3f4f6"/>
+                <circle cx="50" cy="40" r="20" fill="#e5e7eb"/>
+                <rect x="40" y="60" width="20" height="30" rx="2" fill="#e5e7eb"/>
+              </svg>
+            </button>
+            <button class="product-thumbnail" aria-label="Görsel 3" aria-pressed="false">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <rect width="100" height="100" fill="#f3f4f6"/>
+                <circle cx="50" cy="40" r="20" fill="#e5e7eb"/>
+                <rect x="40" y="60" width="20" height="30" rx="2" fill="#e5e7eb"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+          <a href="category.html?brand=dermanova" class="product-brand">DermaNova</a>
+          <h1 class="product-title">Vitamin C Aydınlatıcı Serum</h1>
+          
+          <!-- Rating -->
+          <div class="product-rating" aria-label="Değerlendirme: 5 üzerinden 4.5">
+            <span class="stars" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="star filled"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="star filled"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="star filled"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="star filled"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="star half"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </span>
+            <span class="rating-value">4.5</span>
+            <a href="#reviews" class="review-count">(128 değerlendirme)</a>
+          </div>
+
+          <!-- Price -->
+          <div class="product-price-block">
+            <span class="product-old-price">499,00 ₺</span>
+            <span class="product-current-price">399,00 ₺</span>
+            <span class="product-discount-percent">%20 İndirim</span>
+          </div>
+
+          <!-- Short Description -->
+          <p class="product-short-desc">
+            %15 Saf Vitamin C, Hyaluronik Asit ve Ferülik Asit içeren bu güçlü serum, 
+            cildi aydınlatır, leke görünümünü azaltır ve antioksidan koruma sağlar.
+          </p>
+
+          <!-- Attributes -->
+          <div class="product-attributes">
+            <div class="attribute">
+              <span class="attribute-label">Hacim:</span>
+              <span class="attribute-value">30 ml</span>
+            </div>
+            <div class="attribute">
+              <span class="attribute-label">Cilt Tipi:</span>
+              <span class="attribute-value">Normal, Karma, Yağlı</span>
+            </div>
+            <div class="attribute">
+              <span class="attribute-label">Hedef:</span>
+              <span class="attribute-value">Leke, Aydınlatma, Yaşlanma Karşıtı</span>
+            </div>
+          </div>
+
+          <!-- Stock Status -->
+          <div class="product-stock in-stock">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Stokta</span>
+          </div>
+
+          <!-- Add to Cart -->
+          <div class="product-actions">
+            <div class="quantity-selector">
+              <button class="quantity-btn quantity-decrease" aria-label="Miktarı azalt">-</button>
+              <input type="number" class="quantity-input" value="1" min="1" max="10" aria-label="Miktar">
+              <button class="quantity-btn quantity-increase" aria-label="Miktarı arttır">+</button>
+            </div>
+            <button class="btn btn-primary add-to-cart" data-product-id="1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              Sepete Ekle
+            </button>
+            <button class="btn btn-icon wishlist-btn" aria-label="Favorilere ekle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="product-trust">
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="1" y="3" width="15" height="13" rx="2" ry="2"></rect>
+                <polyline points="16 8 20 8 23 11 23 16 20 16 20 8"></polyline>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+              <span>500₺ Üzeri Ücretsiz Kargo</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>%100 Orijinal Ürün</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+              <span>14 Gün İade Garantisi</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product Tabs -->
+      <div class="product-tabs">
+        <div class="tabs-header" role="tablist">
+          <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-description" id="btn-description">Açıklama</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-ingredients" id="btn-ingredients">İçerik</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-usage" id="btn-usage">Kullanım</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-reviews" id="btn-reviews">Yorumlar (128)</button>
+        </div>
+        <div class="tabs-content">
+          <!-- Description Tab -->
+          <div class="tab-panel active" id="tab-description" role="tabpanel" aria-labelledby="btn-description">
+            <h3>Ürün Açıklaması</h3>
+            <p>DermaNova Vitamin C Aydınlatıcı Serum, cildinize parlaklık ve canlılık kazandıran etkili bir formüle sahiptir. %15 saf L-askorbik asit (Vitamin C) içeren bu serum, güçlü antioksidan özellikleriyle cildi serbest radikallerin zararlı etkilerinden korur.</p>
+            
+            <h4>Temel Faydaları:</h4>
+            <ul>
+              <li>Cilt tonunu eşitler ve aydınlatır</li>
+              <li>Leke ve hiperpigmentasyon görünümünü azaltır</li>
+              <li>Kolajen üretimini destekler</li>
+              <li>İnce çizgi ve kırışıklık görünümünü azaltır</li>
+              <li>Cildi çevresel faktörlere karşı korur</li>
+            </ul>
+            
+            <h4>Uygunluk:</h4>
+            <p>Bu serum, normal, karma ve yağlı cilt tiplerine uygundur. Hassas ciltler için önce küçük bir alanda test edilmesi önerilir.</p>
+          </div>
+
+          <!-- Ingredients Tab -->
+          <div class="tab-panel" id="tab-ingredients" role="tabpanel" aria-labelledby="btn-ingredients" hidden>
+            <h3>İçerik Listesi</h3>
+            <p><strong>Aktif İçerikler:</strong></p>
+            <ul>
+              <li><strong>L-Askorbik Asit (%15)</strong> - Saf Vitamin C, güçlü antioksidan</li>
+              <li><strong>Hyaluronik Asit</strong> - Yoğun nem sağlar</li>
+              <li><strong>Ferülik Asit</strong> - Vitamin C'nin etkinliğini artırır</li>
+              <li><strong>Vitamin E</strong> - Ek antioksidan koruma</li>
+            </ul>
+            
+            <p><strong>Tam İçerik (INCI):</strong></p>
+            <p class="ingredients-inci">
+              Aqua, Ascorbic Acid, Ethoxydiglycol, Glycerin, Propylene Glycol, Sodium Hyaluronate, 
+              Ferulic Acid, Tocopherol, Panthenol, Sodium Citrate, Citric Acid, Phenoxyethanol, 
+              Ethylhexylglycerin.
+            </p>
+          </div>
+
+          <!-- Usage Tab -->
+          <div class="tab-panel" id="tab-usage" role="tabpanel" aria-labelledby="btn-usage" hidden>
+            <h3>Kullanım Talimatları</h3>
+            <ol>
+              <li>Temizlenmiş ve kurulanmış cildinize uygulayın.</li>
+              <li>3-4 damla serumu avuç içinize alın.</li>
+              <li>Yüz ve boyun bölgesine nazikçe yayın.</li>
+              <li>Tamamen emilmesini bekleyin.</li>
+              <li>Ardından nemlendiricinizi ve güneş koruyucunuzu uygulayın.</li>
+            </ol>
+            
+            <h4>Önemli Notlar:</h4>
+            <ul>
+              <li>Sabahları kullanıyorsanız mutlaka SPF 30+ güneş koruyucu kullanın.</li>
+              <li>Retinol ile aynı anda kullanmaktan kaçının.</li>
+              <li>Serin ve karanlık bir yerde saklayın.</li>
+              <li>Açıldıktan sonra 6 ay içinde tüketin.</li>
+            </ul>
+          </div>
+
+          <!-- Reviews Tab -->
+          <div class="tab-panel" id="tab-reviews" role="tabpanel" aria-labelledby="btn-reviews" hidden>
+            <h3>Müşteri Yorumları</h3>
+            
+            <!-- Review Summary -->
+            <div class="review-summary">
+              <div class="review-average">
+                <span class="average-score">4.5</span>
+                <span class="average-stars" aria-hidden="true">★★★★½</span>
+                <span class="total-reviews">128 değerlendirme</span>
+              </div>
+              <div class="review-breakdown">
+                <div class="rating-bar">
+                  <span>5 ★</span>
+                  <div class="bar"><div class="fill" style="width: 72%;"></div></div>
+                  <span>92</span>
+                </div>
+                <div class="rating-bar">
+                  <span>4 ★</span>
+                  <div class="bar"><div class="fill" style="width: 18%;"></div></div>
+                  <span>23</span>
+                </div>
+                <div class="rating-bar">
+                  <span>3 ★</span>
+                  <div class="bar"><div class="fill" style="width: 6%;"></div></div>
+                  <span>8</span>
+                </div>
+                <div class="rating-bar">
+                  <span>2 ★</span>
+                  <div class="bar"><div class="fill" style="width: 2%;"></div></div>
+                  <span>3</span>
+                </div>
+                <div class="rating-bar">
+                  <span>1 ★</span>
+                  <div class="bar"><div class="fill" style="width: 2%;"></div></div>
+                  <span>2</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Individual Reviews -->
+            <div class="reviews-list">
+              <article class="review-item">
+                <div class="review-header">
+                  <span class="reviewer-name">Ayşe K.</span>
+                  <span class="review-stars" aria-label="5 yıldız">★★★★★</span>
+                  <time class="review-date" datetime="2026-01-15">15 Ocak 2026</time>
+                </div>
+                <p class="review-text">Harika bir ürün! 3 haftada cildimde gözle görülür bir aydınlanma oldu. Lekelerin görünümü azaldı. Kesinlikle tavsiye ederim.</p>
+                <span class="verified-purchase">✓ Onaylı Alışveriş</span>
+              </article>
+
+              <article class="review-item">
+                <div class="review-header">
+                  <span class="reviewer-name">Mehmet Y.</span>
+                  <span class="review-stars" aria-label="4 yıldız">★★★★☆</span>
+                  <time class="review-date" datetime="2026-01-10">10 Ocak 2026</time>
+                </div>
+                <p class="review-text">Güzel bir serum, dokusu hafif ve hızlı emiliyor. Sadece ilk kullanımlarda hafif bir karıncalanma hissettim ama bu normal. Fiyat-performans açısından iyi.</p>
+                <span class="verified-purchase">✓ Onaylı Alışveriş</span>
+              </article>
+
+              <article class="review-item">
+                <div class="review-header">
+                  <span class="reviewer-name">Zeynep T.</span>
+                  <span class="review-stars" aria-label="5 yıldız">★★★★★</span>
+                  <time class="review-date" datetime="2026-01-05">5 Ocak 2026</time>
+                </div>
+                <p class="review-text">Cildim hiç bu kadar parlak görünmemişti. Güneş lekelerim belirgin şekilde hafifledi. 2. şişemi kullanıyorum.</p>
+                <span class="verified-purchase">✓ Onaylı Alışveriş</span>
+              </article>
+            </div>
+
+            <!-- Load More Reviews -->
+            <button class="btn btn-secondary load-more-reviews">Daha Fazla Yorum Göster</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Products -->
+      <section class="related-products" aria-labelledby="related-title">
+        <h2 id="related-title" class="section-title">Benzer Ürünler</h2>
+        <div class="products-grid" id="related-products-grid">
+          <!-- Related products will be rendered by JS -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand Column -->
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <img src="logo-1909x941.webp" alt="BirKen Logo" width="150" height="74">
+            </a>
+            <p>BirKen, kozmetik ve sağlık ürünlerinde güvenilir alışveriş deneyimi sunar. Tüm ürünlerimiz %100 orijinaldir.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" aria-label="Twitter">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kurumsal Column -->
+          <div class="footer-column">
+            <h4>Kurumsal</h4>
+            <nav class="footer-links" aria-label="Kurumsal linkler">
+              <a href="about.html">Hakkımızda</a>
+              <a href="about.html#contact">İletişim</a>
+              <a href="about.html#careers">Kariyer</a>
+              <a href="about.html#blog">Blog</a>
+            </nav>
+          </div>
+
+          <!-- Müşteri Hizmetleri Column -->
+          <div class="footer-column">
+            <h4>Müşteri Hizmetleri</h4>
+            <nav class="footer-links" aria-label="Müşteri hizmetleri linkleri">
+              <a href="about.html#faq">Sıkça Sorulan Sorular</a>
+              <a href="about.html#shipping">Teslimat Bilgileri</a>
+              <a href="about.html#returns">İade Koşulları</a>
+              <a href="about.html#privacy">Gizlilik Politikası</a>
+            </nav>
+          </div>
+
+          <!-- Hesabım Column -->
+          <div class="footer-column">
+            <h4>Hesabım</h4>
+            <nav class="footer-links" aria-label="Hesap linkleri">
+              <a href="account.html">Giriş Yap</a>
+              <a href="account.html#register">Üye Ol</a>
+              <a href="account.html#orders">Siparişlerim</a>
+              <a href="account.html#wishlist">Favorilerim</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-content">
+          <p class="footer-copyright">© 2026 BirKen. Tüm hakları saklıdır.</p>
+          <div class="footer-payments" aria-label="Ödeme yöntemleri">
+            <svg viewBox="0 0 50 35" aria-label="Visa" role="img">
+              <rect width="50" height="35" rx="4" fill="#1A1F71"/>
+              <text x="25" y="22" text-anchor="middle" fill="white" font-size="12" font-weight="bold">VISA</text>
+            </svg>
+            <svg viewBox="0 0 50 35" aria-label="Mastercard" role="img">
+              <rect width="50" height="35" rx="4" fill="#2B2B2B"/>
+              <circle cx="20" cy="17.5" r="10" fill="#EB001B"/>
+              <circle cx="30" cy="17.5" r="10" fill="#F79E1B"/>
+            </svg>
+            <svg viewBox="0 0 50 35" aria-label="Troy" role="img">
+              <rect width="50" height="35" rx="4" fill="#003087"/>
+              <text x="25" y="22" text-anchor="middle" fill="white" font-size="10" font-weight="bold">TROY</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/products-data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BirKen - Hesabım">
+  <title>Hesabım - BirKen</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="account-page">
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Ana içeriğe geç</a>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <strong>500₺</strong> ve üzeri alışverişlerde <strong>ücretsiz kargo!</strong>
+    <a href="category.html">Hemen Alışverişe Başla →</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header-main">
+        <!-- Logo -->
+        <a href="index.html" class="logo" aria-label="BirKen Ana Sayfa">
+          <img src="logo-1909x941.webp" alt="BirKen Logo" width="180" height="89">
+        </a>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <form role="search" aria-label="Ürün ara">
+            <label for="search-input" class="sr-only">Ürün ara</label>
+            <input type="search" id="search-input" name="q" placeholder="Ürün, marka veya kategori ara..." autocomplete="off">
+            <button type="submit" aria-label="Ara">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Header Actions -->
+        <nav class="header-actions" aria-label="Hesap ve sepet">
+          <a href="account.html" class="header-action active" aria-label="Hesabım">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>Hesabım</span>
+          </a>
+          <a href="account.html#wishlist" class="header-action" aria-label="Favorilerim">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span>Favoriler</span>
+          </a>
+          <a href="cart.html" class="header-action" aria-label="Sepetim">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span>Sepetim</span>
+            <span class="badge cart-badge" style="display: none;">0</span>
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Menüyü aç" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Navigation -->
+    <nav class="category-nav" aria-label="Kategoriler">
+      <div class="container">
+        <ul class="category-nav-list" role="menubar">
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=cilt-bakimi" class="category-nav-link" role="menuitem">Cilt Bakımı</a>
+          </li>
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=gunes-koruyucular" class="category-nav-link" role="menuitem">Güneş Koruyucular</a>
+          </li>
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=sac-bakimi" class="category-nav-link" role="menuitem">Saç Bakımı</a>
+          </li>
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=anne-bebek" class="category-nav-link" role="menuitem">Anne & Bebek</a>
+          </li>
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=vitamin-takviye" class="category-nav-link" role="menuitem">Vitamin & Takviye</a>
+          </li>
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=agiz-dis" class="category-nav-link" role="menuitem">Ağız & Diş</a>
+          </li>
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=medikal" class="category-nav-link" role="menuitem">Medikal</a>
+          </li>
+          <li class="category-nav-item" role="none">
+            <a href="category.html?cat=makyaj" class="category-nav-link" role="menuitem">Makyaj</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Gezinti yolu">
+        <a href="index.html">Ana Sayfa</a>
+        <span aria-hidden="true">›</span>
+        <span class="current">Hesabım</span>
+      </nav>
+
+      <h1 class="page-title">Hesabım</h1>
+
+      <!-- Auth Section (Not Logged In) -->
+      <section class="auth-section" id="auth-section" aria-label="Giriş veya üye ol">
+        <!-- Auth Tabs -->
+        <div class="auth-tabs" role="tablist">
+          <button class="auth-tab active" role="tab" aria-selected="true" aria-controls="login-panel" id="login-tab">Giriş Yap</button>
+          <button class="auth-tab" role="tab" aria-selected="false" aria-controls="register-panel" id="register-tab">Üye Ol</button>
+        </div>
+
+        <!-- Login Panel -->
+        <div class="auth-panel active" id="login-panel" role="tabpanel" aria-labelledby="login-tab">
+          <form id="login-form" class="auth-form" novalidate>
+            <div class="form-group">
+              <label for="login-email">E-posta Adresi <span class="required">*</span></label>
+              <input type="email" id="login-email" name="email" required autocomplete="email" placeholder="ornek@email.com">
+              <span class="error-message" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="login-password">Şifre <span class="required">*</span></label>
+              <div class="password-input-wrapper">
+                <input type="password" id="login-password" name="password" required autocomplete="current-password" placeholder="••••••••">
+                <button type="button" class="toggle-password" aria-label="Şifreyi göster">
+                  <svg class="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <svg class="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display: none;">
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                  </svg>
+                </button>
+              </div>
+              <span class="error-message" role="alert"></span>
+            </div>
+            <div class="form-row">
+              <label class="checkbox-label">
+                <input type="checkbox" name="remember">
+                <span>Beni hatırla</span>
+              </label>
+              <a href="#forgot-password" class="forgot-password-link">Şifremi unuttum</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Giriş Yap</button>
+          </form>
+
+          <!-- Social Login -->
+          <div class="social-login">
+            <span class="divider-text">veya</span>
+            <button class="btn btn-social btn-google">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+              </svg>
+              Google ile Giriş
+            </button>
+            <button class="btn btn-social btn-facebook">
+              <svg viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+              Facebook ile Giriş
+            </button>
+          </div>
+        </div>
+
+        <!-- Register Panel -->
+        <div class="auth-panel" id="register-panel" role="tabpanel" aria-labelledby="register-tab" hidden>
+          <form id="register-form" class="auth-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="register-firstname">Ad <span class="required">*</span></label>
+                <input type="text" id="register-firstname" name="firstname" required autocomplete="given-name" placeholder="Adınız">
+                <span class="error-message" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="register-lastname">Soyad <span class="required">*</span></label>
+                <input type="text" id="register-lastname" name="lastname" required autocomplete="family-name" placeholder="Soyadınız">
+                <span class="error-message" role="alert"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="register-email">E-posta Adresi <span class="required">*</span></label>
+              <input type="email" id="register-email" name="email" required autocomplete="email" placeholder="ornek@email.com">
+              <span class="error-message" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="register-phone">Telefon <span class="required">*</span></label>
+              <input type="tel" id="register-phone" name="phone" required autocomplete="tel" placeholder="05XX XXX XX XX">
+              <span class="error-message" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="register-password">Şifre <span class="required">*</span></label>
+              <div class="password-input-wrapper">
+                <input type="password" id="register-password" name="password" required autocomplete="new-password" placeholder="En az 8 karakter">
+                <button type="button" class="toggle-password" aria-label="Şifreyi göster">
+                  <svg class="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+              <span class="password-strength"></span>
+              <span class="error-message" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="register-password-confirm">Şifre Tekrar <span class="required">*</span></label>
+              <input type="password" id="register-password-confirm" name="password-confirm" required autocomplete="new-password" placeholder="Şifrenizi tekrar girin">
+              <span class="error-message" role="alert"></span>
+            </div>
+            <label class="checkbox-label">
+              <input type="checkbox" name="terms" required>
+              <span><a href="about.html#terms" target="_blank">Üyelik sözleşmesini</a> ve <a href="about.html#privacy" target="_blank">gizlilik politikasını</a> okudum, kabul ediyorum. <span class="required">*</span></span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="newsletter">
+              <span>Kampanya ve fırsatlardan e-posta ile haberdar olmak istiyorum.</span>
+            </label>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Üye Ol</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Dashboard Section (Logged In) - Initially Hidden -->
+      <section class="dashboard-section" id="dashboard-section" style="display: none;" aria-label="Hesap paneli">
+        <div class="dashboard-layout">
+          <!-- Sidebar Navigation -->
+          <aside class="dashboard-sidebar">
+            <div class="user-info">
+              <div class="user-avatar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="user-details">
+                <span class="user-name">Mehmet Yılmaz</span>
+                <span class="user-email">mehmet@email.com</span>
+              </div>
+            </div>
+            <nav class="dashboard-nav" aria-label="Hesap menüsü">
+              <a href="#orders" class="dashboard-nav-link active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                </svg>
+                Siparişlerim
+              </a>
+              <a href="#wishlist" class="dashboard-nav-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+                Favorilerim
+              </a>
+              <a href="#addresses" class="dashboard-nav-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Adreslerim
+              </a>
+              <a href="#profile" class="dashboard-nav-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                Profil Bilgilerim
+              </a>
+              <a href="#password" class="dashboard-nav-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                Şifre Değiştir
+              </a>
+              <button class="dashboard-nav-link logout-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                  <polyline points="16 17 21 12 16 7"></polyline>
+                  <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+                Çıkış Yap
+              </button>
+            </nav>
+          </aside>
+
+          <!-- Dashboard Content -->
+          <div class="dashboard-content">
+            <!-- Orders Panel -->
+            <div class="dashboard-panel active" id="orders-panel">
+              <h2 class="panel-title">Siparişlerim</h2>
+              
+              <!-- Orders List -->
+              <div class="orders-list">
+                <!-- Order Item -->
+                <article class="order-item">
+                  <div class="order-header">
+                    <div class="order-info">
+                      <span class="order-number">Sipariş #BK2026012345</span>
+                      <time class="order-date" datetime="2026-01-28">28 Ocak 2026</time>
+                    </div>
+                    <span class="order-status status-delivered">Teslim Edildi</span>
+                  </div>
+                  <div class="order-products">
+                    <div class="order-product">
+                      <div class="product-image">
+                        <svg viewBox="0 0 60 60" aria-hidden="true">
+                          <rect width="60" height="60" fill="#f3f4f6"/>
+                          <circle cx="30" cy="24" r="12" fill="#e5e7eb"/>
+                          <rect x="24" y="36" width="12" height="18" rx="2" fill="#e5e7eb"/>
+                        </svg>
+                      </div>
+                      <div class="product-details">
+                        <span class="product-title">Vitamin C Aydınlatıcı Serum</span>
+                        <span class="product-brand">DermaNova</span>
+                        <span class="product-qty">Adet: 1</span>
+                      </div>
+                      <span class="product-price">399,00 ₺</span>
+                    </div>
+                    <div class="order-product">
+                      <div class="product-image">
+                        <svg viewBox="0 0 60 60" aria-hidden="true">
+                          <rect width="60" height="60" fill="#f3f4f6"/>
+                          <circle cx="30" cy="24" r="12" fill="#e5e7eb"/>
+                          <rect x="24" y="36" width="12" height="18" rx="2" fill="#e5e7eb"/>
+                        </svg>
+                      </div>
+                      <div class="product-details">
+                        <span class="product-title">Yüz İçin Güneş Koruyucu SPF 50+</span>
+                        <span class="product-brand">Sunveil</span>
+                        <span class="product-qty">Adet: 2</span>
+                      </div>
+                      <span class="product-price">598,00 ₺</span>
+                    </div>
+                  </div>
+                  <div class="order-footer">
+                    <span class="order-total">Toplam: <strong>997,00 ₺</strong></span>
+                    <div class="order-actions">
+                      <button class="btn btn-secondary btn-sm">Detaylar</button>
+                      <button class="btn btn-text btn-sm">Tekrar Sipariş Ver</button>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Order Item 2 -->
+                <article class="order-item">
+                  <div class="order-header">
+                    <div class="order-info">
+                      <span class="order-number">Sipariş #BK2026011234</span>
+                      <time class="order-date" datetime="2026-01-15">15 Ocak 2026</time>
+                    </div>
+                    <span class="order-status status-shipping">Kargoda</span>
+                  </div>
+                  <div class="order-products">
+                    <div class="order-product">
+                      <div class="product-image">
+                        <svg viewBox="0 0 60 60" aria-hidden="true">
+                          <rect width="60" height="60" fill="#f3f4f6"/>
+                          <circle cx="30" cy="24" r="12" fill="#e5e7eb"/>
+                          <rect x="24" y="36" width="12" height="18" rx="2" fill="#e5e7eb"/>
+                        </svg>
+                      </div>
+                      <div class="product-details">
+                        <span class="product-title">Ceramide Nemlendirici Krem</span>
+                        <span class="product-brand">PureCera</span>
+                        <span class="product-qty">Adet: 1</span>
+                      </div>
+                      <span class="product-price">349,00 ₺</span>
+                    </div>
+                  </div>
+                  <div class="order-footer">
+                    <span class="order-total">Toplam: <strong>349,00 ₺</strong></span>
+                    <div class="order-actions">
+                      <button class="btn btn-secondary btn-sm">Kargo Takip</button>
+                      <button class="btn btn-text btn-sm">Detaylar</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Empty State -->
+              <div class="empty-state" style="display: none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                </svg>
+                <h3>Henüz siparişiniz yok</h3>
+                <p>İlk siparişinizi vererek alışverişe başlayın.</p>
+                <a href="category.html" class="btn btn-primary">Alışverişe Başla</a>
+              </div>
+            </div>
+
+            <!-- Wishlist Panel -->
+            <div class="dashboard-panel" id="wishlist-panel" style="display: none;">
+              <h2 class="panel-title">Favorilerim</h2>
+              <div class="wishlist-grid products-grid">
+                <!-- Wishlist items will be rendered by JS -->
+              </div>
+              <div class="empty-state">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+                <h3>Favori listeniz boş</h3>
+                <p>Beğendiğiniz ürünleri favorilere ekleyerek takip edin.</p>
+                <a href="category.html" class="btn btn-primary">Ürünleri Keşfet</a>
+              </div>
+            </div>
+
+            <!-- Addresses Panel -->
+            <div class="dashboard-panel" id="addresses-panel" style="display: none;">
+              <div class="panel-header">
+                <h2 class="panel-title">Adreslerim</h2>
+                <button class="btn btn-primary btn-sm" id="add-address-btn">+ Yeni Adres Ekle</button>
+              </div>
+              <div class="addresses-grid">
+                <article class="address-card">
+                  <div class="address-header">
+                    <span class="address-label">Ev Adresi</span>
+                    <span class="default-badge">Varsayılan</span>
+                  </div>
+                  <div class="address-body">
+                    <p><strong>Mehmet Yılmaz</strong></p>
+                    <p>Caferağa Mah. Moda Cad. No:123 D:4<br>Kadıköy / İstanbul</p>
+                    <p>0532 XXX XX XX</p>
+                  </div>
+                  <div class="address-actions">
+                    <button class="btn btn-text btn-sm">Düzenle</button>
+                    <button class="btn btn-text btn-sm">Sil</button>
+                  </div>
+                </article>
+                <article class="address-card">
+                  <div class="address-header">
+                    <span class="address-label">İş Adresi</span>
+                  </div>
+                  <div class="address-body">
+                    <p><strong>Mehmet Yılmaz</strong></p>
+                    <p>Levent Mah. Büyükdere Cad. No:456 K:12<br>Beşiktaş / İstanbul</p>
+                    <p>0212 XXX XX XX</p>
+                  </div>
+                  <div class="address-actions">
+                    <button class="btn btn-text btn-sm">Düzenle</button>
+                    <button class="btn btn-text btn-sm">Varsayılan Yap</button>
+                    <button class="btn btn-text btn-sm">Sil</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Profile Panel -->
+            <div class="dashboard-panel" id="profile-panel" style="display: none;">
+              <h2 class="panel-title">Profil Bilgilerim</h2>
+              <form class="profile-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="profile-firstname">Ad</label>
+                    <input type="text" id="profile-firstname" name="firstname" value="Mehmet">
+                  </div>
+                  <div class="form-group">
+                    <label for="profile-lastname">Soyad</label>
+                    <input type="text" id="profile-lastname" name="lastname" value="Yılmaz">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="profile-email">E-posta Adresi</label>
+                  <input type="email" id="profile-email" name="email" value="mehmet@email.com">
+                </div>
+                <div class="form-group">
+                  <label for="profile-phone">Telefon</label>
+                  <input type="tel" id="profile-phone" name="phone" value="0532 XXX XX XX">
+                </div>
+                <div class="form-group">
+                  <label for="profile-birthdate">Doğum Tarihi</label>
+                  <input type="date" id="profile-birthdate" name="birthdate">
+                </div>
+                <div class="form-group">
+                  <label>Cinsiyet</label>
+                  <div class="radio-group">
+                    <label class="radio-label">
+                      <input type="radio" name="gender" value="male">
+                      <span>Erkek</span>
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="gender" value="female">
+                      <span>Kadın</span>
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="gender" value="other">
+                      <span>Belirtmek istemiyorum</span>
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Bilgileri Güncelle</button>
+              </form>
+            </div>
+
+            <!-- Password Panel -->
+            <div class="dashboard-panel" id="password-panel" style="display: none;">
+              <h2 class="panel-title">Şifre Değiştir</h2>
+              <form class="password-form" novalidate>
+                <div class="form-group">
+                  <label for="current-password">Mevcut Şifre <span class="required">*</span></label>
+                  <input type="password" id="current-password" name="current-password" required>
+                  <span class="error-message" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="new-password">Yeni Şifre <span class="required">*</span></label>
+                  <input type="password" id="new-password" name="new-password" required placeholder="En az 8 karakter">
+                  <span class="password-strength"></span>
+                  <span class="error-message" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="confirm-new-password">Yeni Şifre Tekrar <span class="required">*</span></label>
+                  <input type="password" id="confirm-new-password" name="confirm-new-password" required>
+                  <span class="error-message" role="alert"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Şifreyi Değiştir</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand Column -->
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <img src="logo-1909x941.webp" alt="BirKen Logo" width="150" height="74">
+            </a>
+            <p>BirKen, kozmetik ve sağlık ürünlerinde güvenilir alışveriş deneyimi sunar. Tüm ürünlerimiz %100 orijinaldir.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" aria-label="Twitter">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kurumsal Column -->
+          <div class="footer-column">
+            <h4>Kurumsal</h4>
+            <nav class="footer-links" aria-label="Kurumsal linkler">
+              <a href="about.html">Hakkımızda</a>
+              <a href="about.html#contact">İletişim</a>
+              <a href="about.html#careers">Kariyer</a>
+              <a href="about.html#blog">Blog</a>
+            </nav>
+          </div>
+
+          <!-- Müşteri Hizmetleri Column -->
+          <div class="footer-column">
+            <h4>Müşteri Hizmetleri</h4>
+            <nav class="footer-links" aria-label="Müşteri hizmetleri linkleri">
+              <a href="about.html#faq">Sıkça Sorulan Sorular</a>
+              <a href="about.html#shipping">Teslimat Bilgileri</a>
+              <a href="about.html#returns">İade Koşulları</a>
+              <a href="about.html#privacy">Gizlilik Politikası</a>
+            </nav>
+          </div>
+
+          <!-- Hesabım Column -->
+          <div class="footer-column">
+            <h4>Hesabım</h4>
+            <nav class="footer-links" aria-label="Hesap linkleri">
+              <a href="account.html">Giriş Yap</a>
+              <a href="account.html#register">Üye Ol</a>
+              <a href="account.html#orders">Siparişlerim</a>
+              <a href="account.html#wishlist">Favorilerim</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-content">
+          <p class="footer-copyright">© 2026 BirKen. Tüm hakları saklıdır.</p>
+          <div class="footer-payments" aria-label="Ödeme yöntemleri">
+            <svg viewBox="0 0 50 35" aria-label="Visa" role="img">
+              <rect width="50" height="35" rx="4" fill="#1A1F71"/>
+              <text x="25" y="22" text-anchor="middle" fill="white" font-size="12" font-weight="bold">VISA</text>
+            </svg>
+            <svg viewBox="0 0 50 35" aria-label="Mastercard" role="img">
+              <rect width="50" height="35" rx="4" fill="#2B2B2B"/>
+              <circle cx="20" cy="17.5" r="10" fill="#EB001B"/>
+              <circle cx="30" cy="17.5" r="10" fill="#F79E1B"/>
+            </svg>
+            <svg viewBox="0 0 50 35" aria-label="Troy" role="img">
+              <rect width="50" height="35" rx="4" fill="#003087"/>
+              <text x="25" y="22" text-anchor="middle" fill="white" font-size="10" font-weight="bold">TROY</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/products-data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
